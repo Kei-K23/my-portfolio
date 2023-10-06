@@ -4,6 +4,11 @@
 
 
 :root {
+
+
+  --white: #fafafa;
+  --accent: var(--white);
+
   --primary-col: 40, 99, 66;
   --sec-col: 90,
     153,
@@ -20,17 +25,90 @@ body {
   scroll-behavior: smooth;
 }
 
+
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--background);
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--background);
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 100px 0;
+}
+
+
+.indicator {
+  margin: 0;
+  color: var(--accent);
+  left: calc(50% + 130px);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  position: absolute;
+}
+
+.tran-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 500px;
+}
+
+.tran-wrapper .tran-div {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  max-height: 90vh;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #1ecc66;
+  bottom: 0;
+}
+
+
 @layer utilities {
   .primary-col {
-    color: #286342;
+    color: #19934e;
   }
 
   .nav-bg {
     background: rgba(16, 24, 43, 0.99);
+    z-index: 100;
   }
 
   .secondary-col {
-    color: #5a9974;
+    color: #1ecc66;
   }
 
   .page-padding {

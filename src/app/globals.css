@@ -60,7 +60,6 @@ h1 {
 .indicator {
   margin: 0;
   color: var(--accent);
-  left: calc(50% + 130px);
   font-size: 56px;
   font-weight: 700;
   letter-spacing: -3px;
@@ -79,9 +78,8 @@ h1 {
 }
 
 .tran-wrapper .tran-div {
-  width: 300px;
-  height: 400px;
-  position: relative;
+  max-width: 900px;
+  position: absolute;
   max-height: 90vh;
   margin: 20px;
   overflow: hidden;
@@ -98,17 +96,29 @@ h1 {
 
 
 @layer utilities {
-  .primary-col {
-    color: #19934e;
-  }
-
   .nav-bg {
     background: rgba(16, 24, 43, 0.99);
     z-index: 100;
   }
 
+  .primary-col {
+    color: #19934e;
+  }
+
+  .primary-col-border {
+    border: 1px solid #19934e;
+  }
+
+  .primary-col-bg {
+    background: #19934e;
+  }
+
   .secondary-col {
     color: #1ecc66;
+  }
+
+  .secondary-col-bg {
+    background: #1ecc66;
   }
 
   .page-padding {

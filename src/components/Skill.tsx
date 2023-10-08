@@ -18,7 +18,7 @@ const Skill = () => {
         <span className="text-yellow-500"> )</span>{" "}
         <span className="text-yellow-500">&#123;</span>
       </h3>
-      <div className="my-4 grid grid-cols-4 gap-4">
+      <div className="my-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {skills.map((s) => (
           <motion.div
             drag
@@ -27,7 +27,9 @@ const Skill = () => {
             key={s.name}
             className="primary-col-bg p-4 primary-col-border "
           >
-            <h2 className="text-center font-extrabold text-xl">{s.name}</h2>
+            <h2 className="text-center font-extrabold text-lg md:text-xl ">
+              {s.name}
+            </h2>
           </motion.div>
         ))}
       </div>

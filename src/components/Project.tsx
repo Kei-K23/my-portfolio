@@ -20,7 +20,7 @@ const Project = () => {
         <span className="text-yellow-500"> )</span>{" "}
         <span className="text-yellow-500">&#123;</span>
       </h3>
-      <div className="my-4 grid grid-cols-3 gap-4">
+      <div className="my-4 grid grid-cols-1 md:grid-cols-2 lg:md:grid-cols-3 gap-4 h-[500px] xl:h-auto overflow-auto xl:overflow-hidden">
         {projectLists.map((p) => (
           <div
             key={p.name}

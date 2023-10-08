@@ -88,11 +88,14 @@ function Content({
   const y = useParallax(scrollYProgress, 300);
 
   return (
-    <section className="tran-wrapper">
-      <div className={`tran-div ${position.pos1}`} ref={ref}>
+    <section className="tran-wrapper min-h-screen xl:h-screen">
+      <div className={`tran-div xl:${position.pos1}`} ref={ref}>
         {children}
       </div>
-      <motion.h3 className={`indicator ${position.pos2}`} style={{ y }}>
+      <motion.h3
+        className={`hidden xl:block indicator ${position.pos2}`}
+        style={{ y }}
+      >
         #0<span className="secondary-col ">{`${id}`}</span>
       </motion.h3>
     </section>

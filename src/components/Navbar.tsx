@@ -7,7 +7,7 @@ const Navbar = () => {
         <Link href={"/"} className="primary-col text-2xl font-extrabold">
           Kei-K
         </Link>
-        <ul className="flex justify-between items-center gap-6">
+        <ul className="hidden  md:flex justify-between items-center gap-6">
           <li>
             <Link href={"#about"} className="font-bold underline">
               0.<span className="secondary-col">About</span>

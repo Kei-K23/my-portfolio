@@ -10,7 +10,7 @@ const Project = () => {
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.2 }}
-      className="py-4 px-10 tracking-wider primary-col-border"
+      className="select-none py-4 px-10 tracking-wider primary-col-border"
     >
       <h2 className="text-4xl font-bold mb-2">Projects</h2>
       <h3 className="text-xl font-bold">
@@ -24,7 +24,7 @@ const Project = () => {
         {projectLists.map((p) => (
           <div
             key={p.name}
-            className="primary-col-bg p-4 primary-col-border hover:bg-transparent hover:primary-col-border"
+            className="primary-col-bg p-4 primary-col-border transition-all hover:bg-transparent hover:primary-col-border"
           >
             <div className="flex justify-between items-center">
               <h2 className="underline text-xl font-extrabold mb-3">

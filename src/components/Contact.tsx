@@ -10,7 +10,7 @@ const Contact = () => {
         <span className="text-sky-900">console</span>.log(&quot;Contact Me
         <span className="text-sky-900 font-extrabold"> -_-</span> !&quot;)
       </h3>
-      <h3 className="flex items-center gap-2 mt-3">
+      <h3 className="flex items-center gap-2 mt-3 font-bold">
         <AtSign /> keiksl2301@gmail.com
       </h3>
       <h3 className="mt-4 mb-2">Social Links</h3>

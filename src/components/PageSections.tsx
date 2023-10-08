@@ -51,7 +51,7 @@ const Contents: ContentsType = {
       jsx: <Project key={3} />,
       position: {
         pos1: "left-52",
-        pos2: "right-52",
+        pos2: "right-24",
       },
     },
     {
@@ -93,7 +93,7 @@ function Content({
         {children}
       </div>
       <motion.h3
-        className={`hidden xl:block indicator ${position.pos2}`}
+        className={` hidden xl:block indicator ${position.pos2}`}
         style={{ y }}
       >
         #0<span className="secondary-col ">{`${id}`}</span>

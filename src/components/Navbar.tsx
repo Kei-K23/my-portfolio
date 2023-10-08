@@ -7,7 +7,8 @@ const Navbar = () => {
         <Link href={"/"} className="primary-col text-2xl font-extrabold">
           Kei-K
         </Link>
-        <ul className="hidden  md:flex justify-between items-center gap-6">
+        {/* commend for right now */}
+        {/* <ul className="hidden  md:flex justify-between items-center gap-6">
           <li>
             <Link href={"#about"} className="font-bold underline">
               0.<span className="secondary-col">About</span>
@@ -28,7 +29,7 @@ const Navbar = () => {
               3.<span className="secondary-col">Contact</span>
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </header>
   );

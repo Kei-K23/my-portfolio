@@ -27,7 +27,7 @@ const Skill = () => {
             key={s.name}
             className="primary-col-bg p-4 primary-col-border "
           >
-            <h2 className="text-center font-extrabold text-lg md:text-xl ">
+            <h2 className="text-center font-extrabold text-base sm:text-lg md:text-xl ">
               {s.name}
             </h2>
           </motion.div>

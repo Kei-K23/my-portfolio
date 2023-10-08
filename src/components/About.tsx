@@ -4,12 +4,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.2 }}
-      className="select-none py-14 px-10 tracking-wider primary-col-border"
-    >
+    <motion.div className="select-none py-14 px-10 tracking-wider">
       <h2 className="text-4xl font-bold mb-2">About</h2>
       <h3 className="text-xl font-bold">
         <span className="text-sky-900">console</span>.log(&quot;Hello World

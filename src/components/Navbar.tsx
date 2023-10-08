@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <header className="page-padding absolute nav-bg ">
+    <header className="page-padding absolute w-full nav-bg">
       <nav className="flex justify-between items-center">
         <Link href={"/"} className="primary-col text-2xl font-extrabold">
           Kei-K

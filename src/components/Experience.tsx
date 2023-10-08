@@ -8,7 +8,7 @@ const Experience = () => {
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.2 }}
-      className="select-none py-14 px-10 tracking-wider primary-col-border "
+      className="select-none py-14 px-10 tracking-wider "
     >
       <h2 className="text-4xl font-bold mb-2">Experiences</h2>
       <h3 className="text-xl font-bold">

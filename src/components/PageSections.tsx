@@ -13,6 +13,7 @@ import About from "./About";
 import Experience from "./Experience";
 import Project from "./Project";
 import Skill from "./Skill";
+import Contact from "./Contact";
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -61,7 +62,7 @@ const Contents: ContentsType = {
       },
     },
     {
-      jsx: <About key={1} />,
+      jsx: <Contact key={5} />,
       position: {
         pos1: "left-52",
         pos2: "right-52",

@@ -1,40 +1,116 @@
 "use client";
-
+import Image from "next/image";
 import { motion } from "framer-motion";
+import { imgVariants, textVariants } from "@/lib/motion";
+
+const expLists = [
+  "Working with HTML, CSS, JavaScript for 7 months until now",
+  "Builds static website only vanilla JavaScript for 7 months until now",
+  "Working with database and backend for 5 months until now",
+  "Builds modern website with latest language, frameworks, libraries and trend for 4 months until now",
+];
 
 const Experience = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.2 }}
-      className="select-none py-14 px-10 tracking-wider "
-    >
-      <h2 className="text-4xl font-bold mb-2">Experiences</h2>
-      <h3 className="text-xl font-bold">
-        <span className="text-purple-700">for </span>
-        <span className="text-yellow-500">(</span>
-        <span className="text-sky-900">let</span> e = 0 ; e === skills.length ;
-        e++ <span className="text-yellow-500">)</span>{" "}
-        <span className="text-yellow-500">&#123;</span>
-      </h3>
-      <ul className="list-decimal pl-10 my-4">
-        <li className="text-xl mb-2 font-bold">
-          Working with HTML, CSS, JavaScript for 7 months until now
-        </li>
-        <li className="text-xl mb-2  font-bold">
-          Builds static website only vanilla JavaScript for 6 months until now
-        </li>
-        <li className="text-xl mb-2  font-bold">
-          Working with database and backend for 4 months until now
-        </li>
-        <li className="text-xl mb-2  font-bold">
-          Builds modern website with latest language and trend for 3 months
-          until now
-        </li>
-      </ul>
-      <h3 className="text-xl font-bold text-yellow-500">&#125;</h3>
-    </motion.div>
+    <section className="w-full select-none main-section min-h-screen flex justify-start md:justify-center items-start md:items-center flex-col md:flex-row page-padding gap-20">
+      <motion.div
+        variants={imgVariants}
+        className="w-full lg:w-[50%] grid grid-cols-2 gap-7 "
+      >
+        <motion.div
+          variants={imgVariants}
+          initial="hidden"
+          whileInView={imgVariants.fadeIn}
+          className="overflow-hidden rounded-2xl shadow-lg shadow-neutral-700 hover:shadow-none"
+        >
+          <Image
+            src="/photo_1.jpg"
+            width={100}
+            height={100}
+            alt="photo-1"
+            className="hover:scale-105  transition-all w-full h-[200px] lg:h-[200px] object-cover bg-cover "
+          />
+        </motion.div>
+        <motion.div
+          variants={imgVariants}
+          initial="hidden"
+          whileInView={imgVariants.fadeIn}
+          className="overflow-hidden rounded-2xl shadow-lg shadow-neutral-700 hover:shadow-none"
+        >
+          <Image
+            src="/photo_2.jpg"
+            width={100}
+            height={100}
+            alt="photo-2"
+            className="hover:scale-105 transition-all w-full h-[200px] lg:h-[200px] rounded-2xl shadow-lg shadow-neutral-700"
+          />
+        </motion.div>
+        <motion.div
+          variants={imgVariants}
+          initial="hidden"
+          whileInView={imgVariants.fadeIn}
+          className="overflow-hidden rounded-2xl shadow-lg shadow-neutral-700 col-span-2 hover:shadow-none"
+        >
+          <Image
+            src="/photo_3.jpg"
+            width={100}
+            height={100}
+            alt="photo-3"
+            className="hover:scale-105 transition-all w-full h-[200px] lg:h-[200px]  rounded-2xl shadow-lg shadow-neutral-700"
+          />
+        </motion.div>
+      </motion.div>
+      <div className="w-full lg:w-[50%] ">
+        <motion.h2
+          variants={textVariants}
+          initial={textVariants.hiddenFromLeft}
+          animate={textVariants.fadeIn}
+          className="text-xl sm:text-2xl lg:text-2xl xl:text-4xl font-bold mb-2"
+        >
+          Experiences
+        </motion.h2>
+        <motion.h3
+          variants={textVariants}
+          initial={textVariants.hiddenFromRight}
+          animate={textVariants.fadeIn}
+          whileInView={textVariants.fadeIn}
+          className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold"
+        >
+          <span className="text-purple-700">for </span>
+          <span className="text-yellow-500">(</span>
+          <span className="text-sky-900">let</span> e = 0 ; e === skills.length
+          ; e++ <span className="text-yellow-500">)</span>{" "}
+          <span className="text-yellow-500">&#123;</span>
+        </motion.h3>
+        <motion.ul
+          variants={textVariants}
+          initial={textVariants.hiddenFromRight}
+          animate="listFadeIn"
+          whileInView={{ opacity: 1 }}
+          className="list-decimal pl-10 my-4"
+        >
+          {expLists.map((list, index) => (
+            <motion.li
+              variants={textVariants}
+              custom={index}
+              key={index}
+              className="hover:text-green-700 transition-colors text-lg  xl:text-xl font-bold mb-4"
+            >
+              {list}
+            </motion.li>
+          ))}
+        </motion.ul>
+        <motion.h3
+          variants={textVariants}
+          initial={textVariants.hiddenFromRight}
+          animate={textVariants.fadeIn}
+          whileInView={textVariants.fadeIn}
+          className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold text-yellow-500"
+        >
+          &#125;
+        </motion.h3>
+      </div>
+    </section>
   );
 };
 

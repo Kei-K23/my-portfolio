@@ -4,15 +4,10 @@
 
 
 :root {
-
-
   --white: #fafafa;
   --accent: var(--white);
-
   --primary-col: 40, 99, 66;
-  --sec-col: 90,
-    153,
-    116;
+  --sec-col: 90, 153, 116;
   --background-start-rgb: 16, 24, 43;
 }
 
@@ -25,14 +20,11 @@ body {
   scroll-behavior: smooth;
 }
 
-
-
 ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
   background: var(--background);
 }
-
 
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
@@ -47,13 +39,9 @@ html {
   scroll-snap-type: y mandatory;
 }
 
-h1 {
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: -3px;
-  line-height: 1.2;
-  text-align: center;
-  margin: 100px 0;
+.main-section,
+.second-section {
+  scroll-snap-align: center;
 }
 
 
@@ -73,13 +61,10 @@ h1 {
   align-items: center;
   position: relative;
   scroll-snap-align: center;
-  perspective: 500px;
 }
 
 .tran-wrapper .tran-div {
-  max-width: 900px;
   position: absolute;
-  max-height: 90vh;
   margin: 20px;
   overflow: hidden;
 }
@@ -122,6 +107,14 @@ h1 {
   }
 
   .page-padding {
-    @apply py-4 px-14 md:px-24 lg:px-32 xl:px-44
+    @apply py-4 px-14 md:px-16 lg:px-28 xl:px-36
+  }
+
+  .nav-padding {
+    @apply py-4 px-8 md:px-24 lg:px-32 xl:px-44
+  }
+
+  .div-padding {
+    @apply p-5 md:px-8 md:py-6
   }
 }

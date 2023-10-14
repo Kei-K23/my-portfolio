@@ -4,6 +4,7 @@ type ProjectListsType = {
   githubURL: string;
   languageUsage: Array<string>;
   description: string;
+  img: string;
 };
 
 export const projectLists: ProjectListsType[] = [
@@ -14,6 +15,7 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["react", "react-router", "tailwind"],
     description:
       "Movie-man is website to search trending, popular, top-rated movies and Tv shows by using moviedb.",
+    img: "/project_1.png",
   },
   {
     name: "SaveUp",
@@ -22,6 +24,7 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["react", "react-router", "tailwind"],
     description:
       "SaveUp is small expense tracker web application that provide to tracker budget and expenses. Using React, tailwind and LocalStorage Web API.",
+    img: "/project_1.png",
   },
   {
     name: "SummA",
@@ -30,6 +33,7 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["react", "react-toolkit", "tailwind"],
     description:
       "This is web application for article summarization web application that power by Article Extractor and Summarizer from Rapid API",
+    img: "/project_1.png",
   },
   {
     name: "Nike landing page",
@@ -38,6 +42,7 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["react", "tailwind"],
     description:
       "This is practical simple React and Tailwind css by building nike landing web page.",
+    img: "/project_1.png",
   },
   {
     name: "Pizza-time",
@@ -46,6 +51,7 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["react", "typescript", "tailwind"],
     description:
       "This is simple and basic pizza ordering website that build with React + TypeScript + Tailwind CSS.",
+    img: "/project_1.png",
   },
   {
     name: "Password generator",
@@ -54,5 +60,6 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["HTML", "CSS", "javascript"],
     description:
       "This web application allows users to generate strong passwords with customizable options for length and character types.",
+    img: "/project_1.png",
   },
 ];

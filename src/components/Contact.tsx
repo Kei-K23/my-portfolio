@@ -1,5 +1,3 @@
-import { contactLists } from "@/lib/contactLists";
-import { AtSign } from "lucide-react";
 import Link from "next/link";
 
 const Contact = () => {

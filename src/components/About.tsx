@@ -6,7 +6,12 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section className="w-full select-none main-section min-h-screen flex justify-start md:justify-center items-start md:items-center flex-col md:flex-row">
-      <motion.div className=" w-full mt-24 md:mt-0 lg:w-[65%] div-padding md:pl-20 lg:pl-40">
+      <motion.div
+        variants={textVariants}
+        initial={textVariants.hiddenFromLeft}
+        animate={textVariants.fadeIn}
+        className=" w-full mt-24 md:mt-0 lg:w-[65%] div-padding md:pl-20 lg:pl-40"
+      >
         <motion.h2
           variants={textVariants}
           initial={textVariants.hiddenFromLeft}

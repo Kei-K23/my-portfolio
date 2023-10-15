@@ -13,7 +13,7 @@ export default function ProjectsScrollTransition() {
   });
 
   return (
-    <section className="second-section">
+    <div>
       {projectLists.map((project, index) => (
         <ProjectSlide
           key={index}
@@ -26,6 +26,6 @@ export default function ProjectsScrollTransition() {
         />
       ))}
       <motion.div className="progress" style={{ scaleX }} />
-    </section>
+    </div>
   );
 }

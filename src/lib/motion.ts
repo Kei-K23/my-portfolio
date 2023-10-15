@@ -10,7 +10,7 @@ export const textVariants = {
   fadeIn: {
     x: 0,
     opacity: 1,
-    transition: { duration: 1, staggerChildren: 0.5 },
+    transition: { duration: 1, staggerChildren: 0.1 },
   },
   listFadeIn: (i: number) => ({
     x: 0,
@@ -31,3 +31,12 @@ export const imgVariants = {
     },
   },
 };
+
+export function isMobileView() {
+  const wWidth = window.innerWidth;
+  if (wWidth < 1024) {
+    return true;
+  } else if (wWidth > 1024) {
+    return false;
+  }
+}

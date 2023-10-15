@@ -78,11 +78,15 @@ html {
   bottom: 0;
 }
 
-
 @layer utilities {
   .nav-bg {
-    background: rgba(16, 24, 43, 0.99);
+    background: rgba(16, 24, 43, 0.8);
     z-index: 100;
+  }
+
+  .layer-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 
   .primary-col {

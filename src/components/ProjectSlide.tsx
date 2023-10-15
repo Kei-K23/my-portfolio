@@ -1,8 +1,9 @@
 "use client";
-import { useScroll, useTransform, MotionValue } from "framer-motion";
+import { imgVariants, isMobileView } from "@/lib/motion";
+import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Props = {
   name: string;
@@ -26,15 +27,47 @@ const ProjectSlide = ({
   webURL,
 }: Props) => {
   const ref = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isHover, setIsHover] = useState(false);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 300);
+
+  useEffect(() => {
+    function handelResize() {
+      setIsMobile(isMobileView() as boolean);
+    }
+    window.addEventListener("resize", handelResize);
+    return () => {
+      window.removeEventListener("resize", handelResize);
+    };
+  }, []);
+
+  const isY = isMobile ? {} : { y };
+
   return (
     <div className="tran-wrapper min-h-screen">
       <div
-        className="div-padding flex justify-center items-center gap-10"
+        className="div-padding flex flex-col lg:flex-row justify-center items-center gap-10"
         ref={ref}
       >
-        <div className="w-[60%]">
+        <motion.div
+          variants={imgVariants}
+          initial={imgVariants.hidden}
+          whileInView={imgVariants.fadeIn}
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+          className="w-full lg:w-[60%] relative"
+        >
+          <div
+            className={`${
+              isHover ? "flex" : "hidden"
+            } absolute w-full h-full justify-center items-center layer-bg`}
+          >
+            <Link href={webURL} target="_blank">
+              Live View
+            </Link>
+          </div>
+
           <Image
             src={img}
             alt={name}
@@ -42,8 +75,8 @@ const ProjectSlide = ({
             height={100}
             className="w-full h-[300px] md:h-[400px]"
           />
-        </div>
-        <div className="w-[40%]">
+        </motion.div>
+        <motion.div className="w-full lg:w-[40%]" style={isY}>
           <div>
             <h2 className="text-xl sm:text-2xl lg:text-2xl xl:text-4xl font-bold mb-2 text-green-700">
               {name}
@@ -68,7 +101,7 @@ const ProjectSlide = ({
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

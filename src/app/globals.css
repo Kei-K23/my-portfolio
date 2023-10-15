@@ -112,6 +112,11 @@ html {
 
   }
 
+
+  .slider-col {
+    color: #4b4b4b11;
+  }
+
   .page-padding {
     @apply py-4 px-14 md:px-16 lg:px-28 xl:px-36
   }

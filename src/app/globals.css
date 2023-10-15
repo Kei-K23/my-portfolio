@@ -78,6 +78,8 @@ html {
   bottom: 0;
 }
 
+
+
 @layer utilities {
   .nav-bg {
     background: rgba(16, 24, 43, 0.8);

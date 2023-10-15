@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { imgVariants, textVariants } from "@/lib/motion";
 
 const expLists = [
-  "Working with HTML, CSS, JavaScript for 7 months until now",
-  "Builds static website only vanilla JavaScript for 7 months until now",
-  "Working with database and backend for 5 months until now",
-  "Builds modern website with latest language, frameworks, libraries and trend for 4 months until now",
+  "Working with HTML, CSS, JavaScript for 10 months until now",
+  "Builds static website only vanilla JavaScript for 8 months until now",
+  "Builds modern website with latest language, frameworks, libraries and trend for 5 months until now",
+  "Working with database and backend for 4 months until now",
 ];
 
 const Experience = () => {
@@ -60,11 +60,14 @@ const Experience = () => {
           />
         </motion.div>
       </motion.div>
-      <div className="w-full lg:w-[50%] ">
+      <motion.div
+        variants={textVariants}
+        initial={textVariants.hiddenFromRight}
+        animate={textVariants.fadeIn}
+        className="w-full lg:w-[50%] "
+      >
         <motion.h2
           variants={textVariants}
-          initial={textVariants.hiddenFromLeft}
-          animate={textVariants.fadeIn}
           className="text-xl sm:text-2xl lg:text-2xl xl:text-4xl font-bold mb-2"
         >
           Experiences
@@ -73,7 +76,6 @@ const Experience = () => {
           variants={textVariants}
           initial={textVariants.hiddenFromRight}
           animate={textVariants.fadeIn}
-          whileInView={textVariants.fadeIn}
           className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold"
         >
           <span className="text-purple-700">for </span>
@@ -86,14 +88,13 @@ const Experience = () => {
           variants={textVariants}
           initial={textVariants.hiddenFromRight}
           animate="listFadeIn"
-          whileInView={{ opacity: 1 }}
           className="list-decimal pl-10 my-4"
         >
           {expLists.map((list, index) => (
             <motion.li
               variants={textVariants}
-              custom={index}
               key={index}
+              custom={index}
               className="hover:text-green-700 transition-colors text-lg  xl:text-xl font-bold mb-4"
             >
               {list}
@@ -104,12 +105,11 @@ const Experience = () => {
           variants={textVariants}
           initial={textVariants.hiddenFromRight}
           animate={textVariants.fadeIn}
-          whileInView={textVariants.fadeIn}
           className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold text-yellow-500"
         >
           &#125;
         </motion.h3>
-      </div>
+      </motion.div>
     </section>
   );
 };

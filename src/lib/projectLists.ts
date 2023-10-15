@@ -24,7 +24,7 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["react", "react-router", "tailwind"],
     description:
       "SaveUp is small expense tracker web application that provide to tracker budget and expenses. Using React, tailwind and LocalStorage Web API.",
-    img: "/project_1.png",
+    img: "/project_2.png",
   },
   {
     name: "SummA",
@@ -33,7 +33,7 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["react", "react-toolkit", "tailwind"],
     description:
       "This is web application for article summarization web application that power by Article Extractor and Summarizer from Rapid API",
-    img: "/project_1.png",
+    img: "/project_3.png",
   },
   {
     name: "Nike landing page",
@@ -42,7 +42,7 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["react", "tailwind"],
     description:
       "This is practical simple React and Tailwind css by building nike landing web page.",
-    img: "/project_1.png",
+    img: "/project_4.png",
   },
   {
     name: "Pizza-time",
@@ -51,7 +51,7 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["react", "typescript", "tailwind"],
     description:
       "This is simple and basic pizza ordering website that build with React + TypeScript + Tailwind CSS.",
-    img: "/project_1.png",
+    img: "/project_5.png",
   },
   {
     name: "Password generator",
@@ -60,6 +60,6 @@ export const projectLists: ProjectListsType[] = [
     languageUsage: ["HTML", "CSS", "javascript"],
     description:
       "This web application allows users to generate strong passwords with customizable options for length and character types.",
-    img: "/project_1.png",
+    img: "/project_6.png",
   },
 ];

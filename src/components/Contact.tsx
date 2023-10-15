@@ -1,29 +1,80 @@
-import { contactLists } from "@/lib/contactLists";
-import { AtSign } from "lucide-react";
-import Link from "next/link";
+"use client";
 
+import emailjs from "@emailjs/browser";
+import { FormEvent, useRef } from "react";
+import { toast } from "react-hot-toast";
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  function sendEmail(e: FormEvent) {
+    e.preventDefault();
+    if (formRef.current)
+      emailjs
+        .sendForm(
+          "service_vfxkmer",
+          "template_8n51om4",
+          formRef.current,
+          "Fl4iRVMtO8tYp2UDS"
+        )
+        .then(
+          (result) => {
+            toast.success("Successfully sent email");
+          },
+          (error) => {
+            toast.error("Something went wrong");
+          }
+        );
+  }
+
   return (
-    <div className="select-none py-14 px-10 tracking-wider ">
-      <h2 className="text-4xl font-bold mb-2">Contact</h2>
-      <h3 className="text-xl font-bold">
-        <span className="text-sky-900">console</span>.log(&quot;Contact Me
-        <span className="text-sky-900 font-extrabold"> -_-</span> !&quot;)
-      </h3>
-      <h3 className="flex items-center gap-2 mt-3 font-bold">
-        <AtSign /> keiksl2301@gmail.com
-      </h3>
-      <h3 className="mt-4 mb-2">Social Links</h3>
-      <ul className="flex">
-        {contactLists.map((c) => (
-          <li key={c.name} className="mb-4">
-            <Link href={c.link} target="_blank" className="flex gap-3">
-              {c.icon}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <section className="w-full select-none main-section min-h-screen flex justify-center  items-center flex-col md:flex-row gap-4 md:gap-10 div-padding">
+      <div className="w-full md:w-[60%] flex justify-center items-start flex-col lg:pl-20">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4">
+          Let&#39;s Work together
+        </h2>
+        <div className="mb-3">
+          <h3 className="text-lg font-bold">Email</h3>
+          <h3 className="text-slate-400">keiksl2301@gmail.com</h3>
+        </div>
+        <div className="mb-3">
+          <h3 className="text-lg font-bold">Phone</h3>
+          <h3 className="text-slate-400">09-756192218</h3>
+        </div>
+      </div>
+      <div className="w-full md:w-[40%]">
+        <form
+          ref={formRef}
+          onSubmit={sendEmail}
+          className="w-full flex justify-center items-start flex-col gap-5"
+        >
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            className="w-full bg-transparent border-2 border-slate-500 py-2 px-4 text-lg  focus:border-green-700"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            className="w-full bg-transparent border-2 border-slate-500 py-2 px-4 text-lg"
+          />
+          <textarea
+            cols={20}
+            rows={3}
+            placeholder="Message"
+            name="message"
+            className="w-full bg-transparent border-2 border-slate-500 py-2 px-4 text-lg"
+          ></textarea>
+          <button
+            type="submit"
+            className="w-full transition-colors py-2 px-4 bg-green-700 border-2 border-green-700 hover:text-green-700 hover:bg-transparent"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section>
   );
 };
 

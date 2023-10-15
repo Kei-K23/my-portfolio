@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Cursor from "@/components/Cursor";
+import ToastProvider from "@/context/ToastProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Cursor />
+        <ToastProvider />
       </body>
     </html>
   );

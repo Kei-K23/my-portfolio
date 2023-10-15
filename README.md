@@ -15,3 +15,4 @@ This is my personal and own created portfolio website. The purpose of this portf
 ### Contact
 
 Feel free to contact me for every topic and needs.
+

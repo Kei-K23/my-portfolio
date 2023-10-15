@@ -11,7 +11,7 @@ const Skill = () => {
       <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,
@@ -49,7 +49,7 @@ const Skill = () => {
 
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,
@@ -87,7 +87,7 @@ const Skill = () => {
 
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,
@@ -125,7 +125,7 @@ const Skill = () => {
 
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,
@@ -164,7 +164,7 @@ const Skill = () => {
 
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,
@@ -207,7 +207,7 @@ const Skill = () => {
             bottom: 1,
             left: 1,
           }}
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
         >
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
@@ -239,7 +239,7 @@ const Skill = () => {
 
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,
@@ -276,7 +276,7 @@ const Skill = () => {
 
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,
@@ -314,7 +314,7 @@ const Skill = () => {
 
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,
@@ -353,7 +353,7 @@ const Skill = () => {
 
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,
@@ -390,7 +390,7 @@ const Skill = () => {
 
         <motion.div
           drag
-          className="hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
+          className="transition-all hover:shadow-lg hover:shadow-neutral-500 flex justify-center items-center rounded-lg"
           dragConstraints={{
             top: 1,
             right: 1,

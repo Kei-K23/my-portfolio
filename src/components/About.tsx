@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="w-full select-none main-section min-h-screen flex justify-start md:justify-center items-start md:items-center flex-col md:flex-row">
+    <section className="overflow-hidden w-full select-none main-section min-h-screen flex justify-start md:justify-center items-start md:items-center flex-col md:flex-row relative">
       <motion.div
         variants={textVariants}
         initial={textVariants.hiddenFromLeft}
@@ -43,7 +43,8 @@ const About = () => {
           animate={textVariants.fadeIn}
           className="text-lg sm:text-xl lg:text-2xl xl:text-3xl mb-4"
         >
-          I write code and develop things relative to Web technology 🚀.
+          I love coding and program and develop things relative to Web
+          technology 🚀.
         </motion.h3>
         <motion.h3
           variants={textVariants}
@@ -88,6 +89,22 @@ const About = () => {
           </motion.svg>
         </motion.div>
       </div>
+
+      <motion.p
+        initial={{ x: 0 }}
+        animate={{
+          x: "-220%",
+          transition: {
+            repeat: Infinity,
+            repeatType: "mirror",
+            duration: 7,
+          },
+        }}
+        className="w-full md:w-1/2 absolute bottom-3 text-[40vh] font-bold slider-col
+        whitespace-nowrap -z-10"
+      >
+        Code, Eat, Sleep, Love
+      </motion.p>
     </section>
   );
 };

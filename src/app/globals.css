@@ -35,15 +35,17 @@ body {
   background: var(--background);
 }
 
-html {
-  scroll-snap-type: y mandatory;
-}
+@media (min-width: 400px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
 
-.main-section,
-.second-section {
-  scroll-snap-align: center;
-}
+  .main-section,
+  .second-section {
+    scroll-snap-align: center;
+  }
 
+}
 
 .indicator {
   margin: 0;
@@ -114,7 +116,7 @@ html {
 
 
   .slider-col {
-    color: #4b4b4b11;
+    color: #4b4b4b24;
   }
 
   .page-padding {

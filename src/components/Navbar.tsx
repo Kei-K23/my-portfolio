@@ -15,16 +15,28 @@ const variants = {
 const socialMedia = [
   <Link
     key={1}
-    href={"/https://github.com/Kei-K23"}
+    href={"https://github.com/Kei-K23"}
     target="_blank"
     title="Github"
   >
     {SVG.Github(30, 30)}
   </Link>,
-  <Link key={2} href={"/"} target="_blank" title="Facebook">
+  <Link
+    key={2}
+    href={
+      "https://www.facebook.com/profile.php?id=100048899383372&mibextid=ZbWKwL"
+    }
+    target="_blank"
+    title="Facebook"
+  >
     {SVG.Facebook(30, 30)}
   </Link>,
-  <Link key={3} href={"/"} target="_blank" title="x-twitter">
+  <Link
+    key={3}
+    href={"https://x.com/Kei_Katherin?s=09"}
+    target="_blank"
+    title="x-twitter"
+  >
     {SVG.X_twitter(30, 30)}
   </Link>,
 ];

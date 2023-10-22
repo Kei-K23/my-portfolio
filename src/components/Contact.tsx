@@ -2,11 +2,12 @@
 
 import emailjs from "@emailjs/browser";
 import { FormEvent, useRef } from "react";
+import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
 
-  function sendEmail(e: FormEvent) {
+  function sendEmail(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (formRef.current)
       emailjs
@@ -24,6 +25,7 @@ const Contact = () => {
             toast.error("Something went wrong");
           }
         );
+    e.currentTarget.reset();
   }
 
   return (
@@ -53,12 +55,14 @@ const Contact = () => {
               placeholder="Name"
               name="name"
               className="w-full bg-transparent border-2 border-slate-500 py-2 px-4 text-lg  focus:border-green-700"
+              required
             />
             <input
               type="email"
               placeholder="Email"
               name="email"
               className="w-full bg-transparent border-2 border-slate-500 py-2 px-4 text-lg"
+              required
             />
             <textarea
               cols={20}
@@ -66,13 +70,15 @@ const Contact = () => {
               placeholder="Message"
               name="message"
               className="w-full bg-transparent border-2 border-slate-500 py-2 px-4 text-lg"
+              required
             ></textarea>
-            <button
+            <motion.button
+              whileTap={{ scale: 0.96 }}
               type="submit"
               className="w-full transition-colors py-2 px-4 bg-green-700 border-2 border-green-700 hover:text-green-700 hover:bg-transparent"
             >
               Submit
-            </button>
+            </motion.button>
           </form>
         </div>
       </div>
